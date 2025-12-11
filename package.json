@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "@scope/name",
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "esbuild index.ts"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./tsconfig-base": "./tsconfig.base.json"
+  },
+  "imports": {
+    "#tsconfig-base": "@scope/name/tsconfig-base"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.0",
+    "esbuild": "0.27.1",
+    "typescript": "5.9.3"
+  }
+}
